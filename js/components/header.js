@@ -154,7 +154,7 @@ export function createTagNav(products){
     nav.innerHTML = /* html */ `
         <li>
             <a 
-                href="/index.html" class="all-products-link">
+                href="${BASE}/index.html" class="all-products-link">
                 All products
                 </a>
         </li>
