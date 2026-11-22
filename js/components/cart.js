@@ -24,7 +24,7 @@ renderCart()
 - Displays products, quantities, prices, and cart total.
 */
 
-
+const BASE = "/Siri_Kolset_EP1_Jan25PT";
 
 /* Updates the cart counter in the header */
                 /*function updateCartCount() {...} */
@@ -51,7 +51,7 @@ export function toggleCartOverlay(){
     /* If cart icon is clicked while in checkout href to Cart page instead of toggle overlay */
     if (isCheckoutPage && cartButton) {
         cartButton.addEventListener("click", () => {
-            window.location.href = "/cart/index.html";
+            window.location.href = "${BASE}/cart/index.html";
         });
         return;
     }
@@ -243,7 +243,7 @@ export function renderCart(){
             cartItems.innerHTML = /* html */ `
             <div>
                 <p>Your cart is unavailable while logged out.</p>
-                <a href="/account/login.html" class="btn btn-primary">Log in</a>
+                <a href="${BASE}/account/login.html" class="btn btn-primary">Log in</a>
             </div>
             `;
         } 
@@ -253,7 +253,7 @@ export function renderCart(){
             cartItems.innerHTML =/* html */`
                 <div>
                     <p>Oh no! Your cart is empty.</p>
-                    <a href="../index.html" class="btn btn-primary">Browse products</a>
+                    <a href="${BASE}/index.html" class="btn btn-primary">Browse products</a>
                 </div>
             `;
         }
@@ -337,7 +337,7 @@ export function createCartOverlay() {
             <div class="cart-footer">
                 <button id="clear-cart" class="btn btn-secondary">Clear cart</button>
                 <p id="cart-total">Total: 0 NOK</p>
-                <a href="/cart/index.html" id="cart-page-button" class="btn btn-primary">Go to cart</a>
+                <a href="${BASE}/cart/index.html" id="cart-page-button" class="btn btn-primary">Go to cart</a>
             </div>
         </div>
         `;

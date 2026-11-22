@@ -1,3 +1,5 @@
+const BASE = "/Siri_Kolset_EP1_Jan25PT";
+
 import { ratingToStars } from "./cards.js";
 
 import { isLoggedIn } from "../api/auth.js";
@@ -6,7 +8,7 @@ import { isLoggedIn } from "../api/auth.js";
 export function createReviewCard(review){
     return`
         <article class="review">
-            <img src="../assets/icons/user.svg" alt="User image">
+            <img src="${BASE}/assets/icons/user.svg" alt="User image">
             <h3 class="review-username">${review.username}</h3>
             <div class="review-rating">${ratingToStars(review.rating)}</div>
             <p class="review-description">${review.description}</p>
@@ -25,7 +27,7 @@ export function createReviewForm(){
             <section class="review-login-required">
                 <h3>Want to share your experience?</h3>
                 <p>Please log in to leave a review.</p>
-                <a href="../account/login.html" class="btn btn-primary login-button">Log in</a>
+                <a href="${BASE}/account/login.html" class="btn btn-primary login-button">Log in</a>
             </section>
         `;
     }
