@@ -1,3 +1,5 @@
+const BASE = "/Siri_Kolset_EP1_Jan25PT";
+
 /* Import check if user is logged in */
 import { isLoggedIn, logout } from "../api/auth.js";
 
@@ -23,8 +25,8 @@ export function createHeader(){
             <a href="#" class="logout-link">Logout</a>
         `
         : `
-            <a href="/account/login.html" class="login-link">Login</a>
-            <a href="/account/register.html" class="register-link">Register</a>
+            <a href="${BASE}/account/login.html" class="login-link">Login</a>
+            <a href="${BASE}/account/register.html" class="register-link">Register</a>
         `
         ;
 
@@ -33,12 +35,12 @@ export function createHeader(){
         <div class="header-top">
             <!-- Menu icon -->
             <button id="menu-button" class="menu-button" aria-label="Open menu">
-                <img src="./assets/icons/menu.svg" alt="menu icon" class="icon">
+                <img src="${BASE}/assets/icons/menu.svg" alt="menu icon" class="icon">
             </button>
             <!-- Account icon -->
             <div class="account-menu">
                 <button id="account-button" class="account-button" aria-label="Account">
-                    <img src="./assets/icons/user.svg" alt="User icon" class="icon">
+                    <img src="${BASE}/assets/icons/user.svg" alt="User icon" class="icon">
                 </button>
                 <div id="account-dropdown" class="account-dropdown hidden">
                     ${accountLinks}<!-- Content of the dropdown is created based on login status -->
@@ -46,14 +48,14 @@ export function createHeader(){
             </div>
             <!-- Cart icon -->
             <button id="cart-button" class="cart-button" aria-label="Open shopping cart">
-                <img src="./assets/icons/cart.svg" alt="cart icon" class="icon">
+                <img src="${BASE}/assets/icons/cart.svg" alt="cart icon" class="icon">
                 <span id="cart-count">0</span>
             </button>
         </div>
 
         <div class="header-middle">    
-            <a href="/index.html" class="logo-link">
-                <img src="./assets/logo/aytozee-logo.svg" alt="AyToZee logo" class="logo">
+            <a href="${BASE}/index.html" class="logo-link">
+                <img src="${BASE}/assets/logo/aytozee-logo.svg" alt="AyToZee logo" class="logo">
             </a>
         </div>
         
@@ -160,7 +162,7 @@ export function createTagNav(products){
     uniqueTags.forEach(tag => {
         nav.innerHTML += /* html */ `
             <li>
-                <a href="/index.html?tag=${tag}" class="tag-link">${tag}</a>
+                <a href="${BASE}/index.html?tag=${tag}" class="tag-link">${tag}</a>
             </li>
         `;
     });
@@ -201,7 +203,7 @@ export function createShopLink(){
     
     nav.innerHTML = /* html */ `
         <li>
-            <a href="/index.html" class="all-products-link">← Browse Products</a>
+            <a href="${BASE}/index.html" class="all-products-link">← Browse Products</a>
         </li>
     `;
 }
