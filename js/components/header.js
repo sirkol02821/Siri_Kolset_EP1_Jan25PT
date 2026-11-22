@@ -33,12 +33,12 @@ export function createHeader(){
         <div class="header-top">
             <!-- Menu icon -->
             <button id="menu-button" class="menu-button" aria-label="Open menu">
-                <img src="/assets/icons/menu.svg" alt="menu icon" class="icon">
+                <img src="../assets/icons/menu.svg" alt="menu icon" class="icon">
             </button>
             <!-- Account icon -->
             <div class="account-menu">
                 <button id="account-button" class="account-button" aria-label="Account">
-                    <img src="/assets/icons/user.svg" alt="User icon" class="icon">
+                    <img src="../assets/icons/user.svg" alt="User icon" class="icon">
                 </button>
                 <div id="account-dropdown" class="account-dropdown hidden">
                     ${accountLinks}<!-- Content of the dropdown is created based on login status -->
@@ -46,14 +46,14 @@ export function createHeader(){
             </div>
             <!-- Cart icon -->
             <button id="cart-button" class="cart-button" aria-label="Open shopping cart">
-                <img src="/assets/icons/cart.svg" alt="cart icon" class="icon">
+                <img src="../assets/icons/cart.svg" alt="cart icon" class="icon">
                 <span id="cart-count">0</span>
             </button>
         </div>
 
         <div class="header-middle">    
             <a href="/index.html" class="logo-link">
-                <img src="/assets/logo/aytozee-logo.svg" alt="AyToZee logo" class="logo">
+                <img src="../assets/logo/aytozee-logo.svg" alt="AyToZee logo" class="logo">
             </a>
         </div>
         

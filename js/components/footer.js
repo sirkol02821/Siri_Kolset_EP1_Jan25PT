@@ -33,13 +33,13 @@ export function createFooter() {
         </div>
 
         <div class="footer-socials">
-            <a href="#"><img src="/assets/icons/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="/assets/icons/instagram.svg" alt="Instagram"></a>
-            <a href="#"><img src="/assets/icons/youtube.svg" alt="Youtube"></a>
+            <a href="#"><img src="../assets/icons/facebook.svg" alt="Facebook"></a>
+            <a href="#"><img src="../assets/icons/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="../assets/icons/youtube.svg" alt="Youtube"></a>
         </div>
 
         <div class="footer-bottom">
-            <img src="/assets/logo/aytozee-logo.svg" alt="AyToZee logo" class="logo">
+            <img src="../assets/logo/aytozee-logo.svg" alt="AyToZee logo" class="logo">
             <p>&copy; 2026 AyToZee. All rights reserved.</p>
         </div>
     `;
