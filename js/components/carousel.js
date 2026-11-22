@@ -61,7 +61,7 @@ function renderCarousel() {
             </div>
             <h2>${product.title}</h2>
             <div class="carousel-pricing">${pricingHTML}</div>
-            <a href="/product/index.html?id=${product.id}" class="btn btn-primary">
+            <a href="./product/index.html?id=${product.id}" class="btn btn-primary">
                 View Details
             </a>
         </article>

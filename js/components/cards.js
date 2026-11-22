@@ -64,7 +64,7 @@ export function createCard(product) {
 
     return /* html */ `
         <article class="product-card">
-            <a href="/product/index.html?id=${product.id}" class="product-image-wrapper">
+            <a href="./product/index.html?id=${product.id}" class="product-image-wrapper">
                 <img class="product-image" src="${product.image.url}" alt="${product.image.alt}">
                 <span class="image-overlay">View Details</span>
             </a>
@@ -72,7 +72,7 @@ export function createCard(product) {
                 <h3 class="product-title">${product.title}</h3>
                 <div class="product-rating">${stars}</div>
                 <div class="product-pricing">${pricingHTML}</div>
-                <a href="/product/index.html?id=${product.id}" class="btn btn-secondary">
+                <a href="./product/index.html?id=${product.id}" class="btn btn-secondary">
                     View Details
                 </a>
             </div>
