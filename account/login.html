@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AyToZee - Login</title>
+  <meta name="description" content="Browse varied products at AyToZee.">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/aytozee-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/login.css">
+</head>
+<body>
+    <header id="header">
+            <!-- header content created in header.js -->
+
+        <nav class="navbar hidden">
+            <ul id="tag-nav"></ul><!-- Generated with JS from API tags-->   
+        </nav>
+    </header>
+
+    <aside id="cart-overlay" class="cart-overlay hidden">
+        <!-- Content of cart overlay is handled in cart.js -->
+    </aside>
+    
+    <main>
+        <section class="form-container">
+            <form id="login-form" class="login-form">
+                <h1>Log in</h1>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input 
+                        id="email"
+                        type="email" 
+                        required>
+                </div>
+                <div class="form-field">  
+                    <label for="password">Password</label>
+                    <input 
+                        id="password"
+                        type="password" 
+                        required>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <div id="form-error" class="form-error"></div>
+                <button class="btn btn-primary" type="submit">Log in</button>
+                <div class="register-prompt">
+                    <p>New to AyToZee?</p>
+                    <a href="./register.html" class="btn btn-secondary">Create an account</a>
+                </div>
+
+            </form>                
+        </section>
+    </main>
+
+    <footer id="footer">
+        <!-- footer content created in footer.js -->
+    </footer>
+
+    <script type="module" src="../js/pages/login.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>

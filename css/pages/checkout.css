@@ -1,0 +1,63 @@
+/* Checkout form css is in form.css*/
+
+h1{
+    text-align: center;
+}
+
+#checkout-total {
+    margin-top: 1.5rem;
+}
+
+#checkout-total p {
+    margin: 0.5rem 0;
+}
+
+.checkout-total {
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-top: 1px solid var(--color-grey);
+    padding-top: 1rem;
+}
+
+
+/* PAYMENT */
+.payment {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+.payment-option input[type="radio"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--color-gold);
+    cursor: pointer;
+}
+.payment-option label {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* EMPTY CHECKOUT */
+.empty-checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    min-height: 45vh;
+}
+
+@media (min-width: 700px){
+    .checkout-page {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-m);
+    }
+}

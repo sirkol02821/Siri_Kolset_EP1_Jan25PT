@@ -1,0 +1,12 @@
+main .cart-empty p {
+    color: var(--color-graphite);
+}
+main h1 {
+    text-align: center;
+}
+
+@media (min-width: 700px){
+    main {
+        max-width: 600px;
+    }
+}

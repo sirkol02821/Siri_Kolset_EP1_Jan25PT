@@ -1,0 +1,109 @@
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-silver);
+    padding: var(--space-xl);
+    border-radius: var(--radius-m);
+    width: 100%;
+}
+ .form-container {
+    width: 100%;
+    text-align: center;
+ }
+ .form-container form{
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+ }
+ .form-container h1 {
+    text-align: center;
+    margin-bottom: var(--space-m);
+}
+
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-s);
+}
+
+/* Form Input styling */
+form input{
+    border-radius: var(--radius-s);
+    border: 1px solid var(--color-silver);
+    padding: var(--space-s);
+}
+form input:hover{
+    border: 1px solid var(--color-charcoal);
+}
+form input:focus{
+    outline: none;
+    box-shadow: var(--shadow-input);
+}
+
+    /* Input: Form validation*/
+input:user-invalid {
+    border-color: var(--color-error-text);
+    background-color: var(--color-error-bg);
+}
+
+
+/* Form checkbox styling */
+.form-checkbox{
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+/* Form "select" styling (used in review-form)*/
+form select{
+    border-radius: var(--radius-s);
+    border: 1px solid var(--color-slate);
+    padding: var(--space-s);
+    font-weight: bold;
+    color: var(--color-gold);
+    font-size: var(--fontsize-body);
+}
+form select:focus{
+    outline: none;
+}
+form select option{
+    color: var(--color-gold);
+    font-size: var(--fontsize-body);
+    font-weight: bold;
+}
+
+form textarea {
+    border-radius: var(--radius-s);
+    border: 1px solid var(--color-slate);
+    padding: var(--space-s);
+}
+form textarea:focus{
+    outline: none;
+    box-shadow: var(--shadow-input);
+}
+form .btn {
+    border: solid 1px var(--color-mist);
+    margin-top: var(--space-l);
+}
+
+/* Form error handling  */
+.form-error {
+    text-align: center;
+    min-height: 1.5rem;
+    color: var(--color-error-text);
+    font-size: var(--fontsize-small);
+    margin-top: var(--space-xs);
+    margin-bottom: var(--space-s);
+}
+.form-error:not(:empty) {
+    background-color: var(--color-error-bg);
+    border: solid 1px var(--color-error-text);
+    padding: var(--space-xs);
+    border-radius: var(--radius-s);
+}
+
+form .btn-secondary {
+    padding: 0.9rem;
+    font-size: var(--fontsize-body);
+}

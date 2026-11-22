@@ -1,0 +1,113 @@
+/* Base Button */
+
+.btn {
+    display:inline-flex;
+    justify-content:center;
+    align-items: center;
+
+    border:none;
+    border-radius: var(--radius-m);
+
+    padding: var(--space-m) var(--space-l);
+
+    color: var(--color-mist);
+    font-size: var(--fontsize-h3);
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease, 
+        box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    text-decoration: none;
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
+    filter: brightness(1.1);
+
+}
+
+
+/*Button States*/
+
+.btn:hover:not(:disabled, .btn-disabled) {
+    box-shadow: var(--shadow-hover);
+}
+.btn:active:not(:disabled, .btn-disabled) {
+    box-shadow: var(--shadow-button-onclick);
+}
+.btn:disabled, .btn-disabled {
+    opacity:0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn-primary,
+.btn-secondary {
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Primary Button */
+
+.btn-primary {
+    background-color: var(--color-gold);
+    color: var(--color-mist);
+    font-weight: bold;
+}
+
+
+/* Secondary Button */
+
+.btn-secondary {
+    background-color: var(--color-slate);
+    color: var(--color-mist);
+}
+
+
+/* Small button for quantity controls */
+.btn-small {
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    font-size: 1.5rem;
+}
+
+/* Carousel button */
+
+.carousel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 3rem;
+    font-size: var(--fontsize-h3);
+
+    border-radius: 50%;
+    background-color: var(--color-mist);
+    color: var(--color-graphite);
+
+    box-shadow: var(--shadow-product-card);
+
+}
+
+.carousel-btn:hover {
+    background-color: var(--color-silver);
+    color: var(--color-charcoal);
+    box-shadow: var(--shadow-hover);
+    transform: scale(1.2);
+    box-shadow: var(--shadow-hover);
+    filter: none;
+}
+
+
+@media (max-width: 250px) {
+
+    .btn {
+        font-size: 0.8rem;
+        padding: var(--space-s);
+    }
+
+}

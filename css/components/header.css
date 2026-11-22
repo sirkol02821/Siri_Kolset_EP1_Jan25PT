@@ -1,0 +1,285 @@
+
+header {
+    position: sticky;
+    top: 0;
+    z-index:1000;
+    background-color: var(--color-charcoal);
+    color: var(--color-mist);
+    padding-top: var(--space-s);
+    padding-bottom: var(--space-s);
+    padding-inline: var(--space-m);
+    min-height: 60px;
+    box-shadow: var(--shadow-product-card);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+header.scrolled {
+    padding-top: 0.4rem;
+    padding-bottom: 0rem;
+}
+
+/* Header top ( MENU, ACCOUNT, CART )*/
+.header-top {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+    /* Layout */
+    .menu-button {
+        justify-self: start;
+    }
+    .account-menu {
+        justify-self: center;
+    }
+    .cart-button {
+        justify-self: end;
+    }
+
+    /*    Header icons    */
+        /* color changed to  stroke="#F4F4F4" aka var(--color-mist) directly in svg files*/
+
+.menu-button,
+.account-button,
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+header.scrolled .icon{
+    transform: scale(0.8);
+}
+
+header .cart-button {
+    position: relative;
+}
+header .cart-button:hover, header .account-button:hover , header .menu-button:hover{
+    transform: scale(1.1);
+}
+
+    /*  Account button and dropdown menu  */
+.account-menu{
+    position: relative;
+}
+.account-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--space-s);
+    background-color: var(--color-graphite);
+    border: 1px solid var(--color-slate);
+    border-radius: var(--radius-s);
+    box-shadow: var(--shadow-overlay);
+    z-index: 2000;
+    text-align: center;
+    width: 180px;
+}
+.account-dropdown a {
+    display: block;
+    padding: var(--space-s);
+    color: var(--color-mist);
+    min-width: 120px;
+    text-decoration: none;
+}
+.account-dropdown a:hover {
+    text-decoration: underline;
+    color: var(--color-gold);
+}
+.username strong{
+    color: var(--color-gold);
+}
+
+
+/* number indicator showing how many items are in the cart */
+/* The CSS of the actual Cart overlay can be found in components/cart-overlay.css */
+header .cart-button span{
+    color: var(--color-charcoal);
+    font-weight: bold;
+    background-color: var(--color-gold);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top:-6px;
+    right: -8px;
+}
+
+
+
+
+/*  Header middle ( LOGO ) */
+.header-middle {
+    display: flex;
+    justify-content: center;
+    margin-block: var(--space-xs);
+}
+.logo-link {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 40px;
+    transition: height 0.3s ease;
+}
+header.scrolled .logo {
+    transform: scale(0.8);
+}
+
+
+
+/*  Header bottom ( NAV )   */
+
+.navbar ul {
+    list-style:none;
+    padding-left: var(--space-l);
+}
+.navbar a {
+    color: var(--color-mist);
+    text-transform: capitalize;
+}
+nav .active {
+    color: var(--color-gold);
+    text-decoration: underline;
+}
+
+
+
+.navbar {
+    background-color: var(--color-graphite); 
+    position: absolute;
+
+    top:100%;
+    left:0;
+    width: 75vw;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    transform:translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    border-radius: 0 0 var(--radius-m) 0;
+    box-shadow: var(--shadow-hover);
+}
+.navbar::after{  /* adding a visual cue that the menu continues with scrollbar */
+    content:"";
+    position: sticky;
+    bottom:0;
+    display:block;
+    height:40px;
+    background: linear-gradient(transparent,var(--color-charcoal));
+    pointer-events:none;
+}
+
+/*  When the menu icon is clicked on mobile*/
+
+.navbar.open { 
+    display: block;
+    transform: translateX(0);
+}
+
+#tag-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s)
+}
+
+
+@media (min-width: 768px) {
+
+    /* Removing mobile-only styling */
+    .navbar {
+        display:block;
+        position: static;
+        width: auto;
+        height: auto;
+        transform: none;
+        overflow: visible;
+        background: transparent;
+        border-radius: 0;
+        box-shadow:none;
+        transform: none;
+        padding-block: 0;
+    }
+    .navbar::after {
+        content: none;
+    }
+    header.scrolled .logo, header.scrolled .icon{
+        transform: none;
+    }
+
+    /*  Hiding menu button and showing <nav>    */
+    .menu-button {
+        display: none;
+    }
+    #tag-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.25rem 0.75rem;
+        flex-wrap: wrap;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    header.scrolled #tag-nav {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+
+    /* Desktop header layout */
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-areas:
+            ". logo top"
+            "nav nav nav";
+    }
+    .header-top {
+        grid-area: top;
+        display: flex;
+        justify-content: flex-end;
+        gap: var(--space-s);
+    }
+    .header-middle {
+        grid-area: logo;
+        justify-content: flex-start;
+        margin-block: 0;
+    }
+    .navbar {
+        grid-area: nav;
+    }
+
+    .account-dropdown {
+        left: auto;
+        right: 0;
+        transform: none;
+    }
+
+}
+
+
+/*  Tiny screens */
+@media (max-width: 160px) {
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+    .logo {
+        height: 28px;
+    }
+    header .cart-button span {
+        width: 16px;
+        height: 16px;
+        font-size: 0.75rem;
+        top: -4px;
+        right: -6px;
+    }
+}

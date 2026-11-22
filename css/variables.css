@@ -1,0 +1,56 @@
+/* colors, typography, spacing (from Figma style guide */
+:root {
+/* Colors */
+--color-charcoal: #2B2B2B;
+--color-graphite: #444444;
+--color-slate: #737373;
+--color-silver: #B8B8B8;
+--color-mist: #F4F4F4;
+--color-gold: #D4A017;
+
+--color-error-bg: #F9D1D1;
+--color-error-text: #7A2E2E;
+
+--color-success-bg: #DDE8D0;
+--color-success-text: #3E5F3A;
+
+
+/* Typography */
+--font-family-base: "Inter", sans-serif;
+
+--fontsize-h1: 3rem;
+--fontsize-h2: 2rem;
+--fontsize-h3: 1.5rem;
+--fontsize-body: 1rem;
+--fontsize-small: 0.875rem;
+
+/* Spacing */
+--space-xs: 4px;
+--space-s: 8px;
+--space-m: 16px;
+--space-l: 24px;
+--space-xl: 32px;
+--space-2xl: 48px;
+--space-3xl: 64px;
+--space-4xl: 96px;
+
+/* Border Radius */
+--radius-s: 8px;
+--radius-m: 16px;
+--radius-l: 24px;
+
+/* Shadows */
+
+    /* Product card */
+        --shadow-product-card: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* Hover */
+        --shadow-hover: 6px 6px 8px rgba(0, 0, 0, 0.5);
+
+    /* Selected input */
+        --shadow-input: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* Button onclick */
+        --shadow-button-onclick: inset 2px 2px 4px rgba(0, 0, 0, 0.75);
+
+}

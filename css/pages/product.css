@@ -1,0 +1,122 @@
+/*  Review section of product/index.html is in css/components/reviews.css    */
+@import url("../components/reviews.css");
+
+main{
+    padding: 5%;
+}
+
+/* IMAGE */
+.product-image-main{
+    justify-self: center;
+    margin-top: var(--space-s);
+}
+
+.product-image-main img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    display: block;
+    border: 1px solid var(--color-silver);
+    border-radius: var(--radius-s);
+}
+
+/* BASICS */
+.product-basics {
+    margin-top: var(--space-s);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    background: var(--color-mist);
+    padding: var(--space-l);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-product-card);
+}
+.product-basics button {
+    align-self: center;
+}
+
+    /* TITLE */
+.product-basics h1 {
+    font-size: var(--fontsize-h2);
+}
+
+    /* TAGS */
+.product-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs)
+}
+.product-tag {
+    padding: var(--space-xs) var(--space-s);
+    background-color: var(--color-slate);
+    color: var(--color-mist);
+    border-radius: 999px;
+}
+
+    /* REVIEWS */  /* Rating stars in reviews.css */
+.review-link {
+    color:var(--color-slate);
+    font-size: var(--fontsize-small);
+}
+
+    /* SHARE */
+.share-button {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-slate);
+    font-weight: 600;
+}
+
+.share-icon {
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-gold);
+    border-radius: 50%;
+
+    box-shadow: var(--shadow-product-card);
+    transition: transform 0.3s ease;
+}
+.share-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+.share-button img {
+    width: 2rem;
+    height: 2rem;
+}
+
+@media (min-width: 700px){
+    #product-details {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "image          basics"
+            "description    description"
+            "reviews        reviews";
+        gap: var(--space-l);
+    }
+    .product-image-main {
+        grid-area: image;
+    }
+    .product-basics {
+        grid-area: basics;
+    }
+    .product-description{
+        grid-area: description;
+    }
+    .product-reviews{
+        grid-area: reviews;
+    }
+}

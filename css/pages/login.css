@@ -1,0 +1,36 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 45vh;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+}
+
+/*  If already logged in */
+.logged-in-message {
+    text-align: center;
+}
+.logged-in-message h1{
+    color: var(--color-mist);
+}
+.logged-in-message .btn {
+    margin: 0 auto;
+    display: block;
+}
+
+
+/*  LOGIN FORM   */
+    /* Universal form layouts from components/forms.css */
+
+.register-prompt {
+    margin-top: var(--space-xl);
+    text-align: center;
+}
+.register-prompt p {
+    font-style: italic;
+    margin-bottom: var(--space-s);
+}
+.register-prompt .btn{
+    margin-top: var(--space-s);
+}

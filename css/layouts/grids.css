@@ -1,0 +1,15 @@
+.product-grid {
+    display: grid;
+    gap: var(--space-l);
+
+    grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
+        /*this line makes the grid adapt no matter the screen size without needing media queries */
+    justify-items: center;
+}
+
+/* Reducing space between cards on tiny screens */
+@media (max-width: 250px) {
+    .product-grid {
+        gap: var(--space-s);
+    }
+}

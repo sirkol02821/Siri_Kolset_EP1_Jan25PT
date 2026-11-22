@@ -1,0 +1,107 @@
+/* reset global styles */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Text Styles */
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--fontsize-body);
+    color: var(--color-graphite);
+}
+main {
+    padding: var(--space-m) var(--space-s);
+}
+
+h1 {
+    font-size: clamp(
+        var(--fontsize-h2),
+        4vw,
+        var(--fontsize-h1)
+    );
+    font-weight: bold;
+}
+
+h2 {
+    font-size: clamp(
+        var(--fontsize-h3),
+        3vw,
+        var(--fontsize-h2)
+    );
+    font-weight: bold;
+}
+
+h3 {
+    font-size: clamp(
+        var(--fontsize-body),
+        2vw,
+        var(--fontsize-h3)
+    );
+    font-weight: normal;
+}
+
+small {
+    font-size: clamp(
+        0.75rem,
+        1vw,
+        var(--fontsize-small)
+    );
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* .hidden  used for 
+- <nav> on mobile
+- menu icon on desktop
+- cart overlay
+- leave a review success message */
+
+.hidden {
+    display: none;
+}
+
+/*.no-scroll used to hide the page scrollbar when the cart is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/*  SCROLLBAR STYLING */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-slate);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-silver);
+}
+
+/*  Tiny screens */
+@media (max-width: 160px) {
+    h1 {
+        font-size: 20px;
+        word-wrap: break-word;
+    }
+    h2 {
+        font-size: var(--fontsize-body);
+        font-weight: bold;
+    }
+}

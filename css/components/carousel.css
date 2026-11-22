@@ -1,0 +1,145 @@
+/* Carousel container*/
+#carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-l);
+    border-radius: var(--radius-l);
+    background-color: var(--color-charcoal);
+    color: var(--color-mist);
+}
+
+/* Carousel buttons position */
+    /*appearance styled in buttons.css*/
+.carousel-btn {
+    position:absolute;
+    top:50%;
+    z-index: 2;
+}
+#carousel-previous{
+    left: 20%;
+}
+#carousel-next {
+    right:20%;
+}
+
+/* Card styling */
+.carousel-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+}
+
+    /* Rank styling */
+.carousel-rank h3{
+    font-weight: bold;
+    color: var(--color-gold);
+    filter: brightness(1.1);
+    margin: 0.25rem 0;
+    font-size: 2.5rem;
+}
+.carousel-rank p{
+    margin: 0;
+    color: var(--color-slate);
+    font-size: var(--fontsize-small);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+    /*  Image styling */
+.carousel-card img{
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--radius-m);
+}
+    /* Badge with savings  */
+.carousel-image-wrapper{
+    position: relative;
+}
+.carousel-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: var(--space-xs) var(--space-s);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    border-radius: 999px;
+
+    background: linear-gradient(to bottom, #F4d35e,var(--color-gold));
+    color: var(--color-charcoal);
+    font-weight: 700;
+
+    transform: rotate(-12deg);
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.25);
+}
+
+/*  Product title styling */
+.carousel-card h2{
+    margin: 0;
+    min-height: 2.5rem;
+}
+
+/* Price styling */
+.carousel-pricing p{
+    margin: 0.25rem 0;
+}
+/*  Discounted price styling */
+.carousel-card .product-discount{
+    color: var(--color-mist);
+    font-weight: normal;
+}
+
+
+/* limiting height of carousel on big screens */
+@media (min-width: 1024px) {
+    #carousel {
+        min-height: 550px;
+    }
+    .carousel-card img {
+        max-width: 240px;
+    }
+}
+
+/*  Sending next and previous buttons to the edge on smaller screens*/
+@media (max-width: 700px) {
+
+    #carousel-previous {
+        left: 0.5rem;
+    }
+
+    #carousel-next {
+        right: 0.5rem;
+    }
+
+}
+
+/* Changing position and appearance of previous and next buttons on even smaller screens*/
+@media (max-width: 400px){
+    .carousel-btn {
+        background-color: rgba(255, 255, 255, 0.4);
+        top: 5%;
+    }
+
+}
+
+/*  Making "View Product" button smaller and hiding "save 25%" badge on small screens*/
+@media (max-width: 250px){
+    .carousel .btn-primary {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    .carousel-badge {
+        display: none;
+    }
+}

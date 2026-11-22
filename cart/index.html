@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AyToZee - Cart</title>
+  <meta name="description" content="Browse varied products at AyToZee.">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/aytozee-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/cart.css">
+</head>
+<body>
+    <header id="header">
+            <!-- header content created in header.js -->
+
+        <nav class="navbar hidden">
+            <ul id="tag-nav"></ul><!-- Generated with JS from API tags-->   
+        </nav>
+    </header>
+
+    <main> 
+        <h1>Your cart</h1>
+
+        <div id="cart-items">
+            <!-- cart items created in components/cart.js -->
+        </div>
+            
+        <div class="cart-footer">
+            <button id="clear-cart" class="btn btn-secondary">Clear cart</button>
+            <p id="cart-total">Total: 0 NOK</p>
+            <a href="../index.html" id="continue-shopping-button" class="btn btn-secondary">Continue shopping</a>
+            <a href="/checkout/index.html" id="checkout-button" class="btn btn-primary">Proceed to Checkout</a>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <!-- footer content created in footer.js -->
+    </footer>
+
+    <script type="module" src="../js/pages/cart.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>

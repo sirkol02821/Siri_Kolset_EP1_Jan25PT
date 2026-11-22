@@ -1,0 +1,39 @@
+main {
+    text-align: center;
+}
+
+.success-order-summary,
+.success-shipping,
+.success-delivery {
+    background: var(--color-mist);
+    border-radius: var(--radius-m);
+    padding: var(--space-l);
+    margin: var(--space-l) auto;
+    max-width: 500px;
+
+    box-shadow: var(--shadow-product-card);
+}
+
+#order-number {
+    color: var(--color-gold);
+    font-weight: bold;
+    font-size: var(--fontsize-h3);
+}
+
+#success-total p, .delivery {
+    font-size: var(--fontsize-p);
+    font-weight: bold;
+    color: var(--color-gold);
+    margin-top: var(--space-m);
+}
+
+#success-items,
+#shipping-details {
+    max-width: 300px;
+    margin: 0 auto;
+}
+#success-total h3, .success-shipping h3 {
+    font-size: var(--fontsize-p);
+    font-weight: bold;
+    padding-top: var(--space-l);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AyToZee - Order confirmation</title>
+  <meta name="description" content="Browse varied products at AyToZee.">
+  <link rel="icon" type="image/svg+xml" href="../assets/logo/aytozee-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/pages/success.css">
+</head>
+<body>
+    <header id="header">
+            <!-- header content created in header.js -->
+
+        <nav class="navbar hidden">
+            <ul id="tag-nav"></ul><!-- Generated with JS from API tags-->   
+        </nav>
+    </header>
+    
+    <aside id="cart-overlay" class="cart-overlay hidden">
+        <!-- Content of cart overlay is handled in cart.js -->
+    </aside>
+
+    <main>
+        <section class="success-message">
+            <h1>Order Confirmed</h1>
+            <p>Thank you for your purchase!</p>
+            <p id="order-number"></p>
+            <p>Your order has been received and is being processed.</p>
+        </section>
+
+
+        <section class="success-order-summary">
+            <h2>Order Summary</h2>
+            <div id="success-items"></div>
+            <div id="success-total"></div>
+        </section>
+
+        <section class="success-shipping">
+            <h2>Shipping Information</h2>
+            <div id="shipping-details"></div>
+            <h3>Estimated delivery</h3>
+            <p class="delivery"> 3-5 business days</p>
+
+        </section>
+
+
+        <a href="../index.html" class="btn btn-primary">Continue Shopping</a>
+
+    </main>
+    <footer id="footer">
+            <!-- footer content created in footer.js -->
+    </footer>
+
+    <script type="module" src="../js/pages/success.js"></script>
+    <script type="module" src="../js/main.js"></script>
+</body>
